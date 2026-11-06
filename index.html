@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top in Box CWB | Cardápio Digital</title>
+<meta name="description" content="Conheça o cardápio da Top in Box CWB. Confira nossos pastéis, doces, salgados, pacotes, bebidas e encomendas.">
+<meta name="theme-color" content="#DF6F12">
+<meta property="og:title" content="TOP IN BOX CWB | Cardápio Digital">
+<meta property="og:description" content="Conheça o cardápio da Top in Box CWB. Confira nossos pastéis, doces, salgados, pacotes, bebidas e encomendas.">
+<meta property="og:image" content="assets/logo-top-in-box.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="intro" aria-hidden="true"><img src="assets/logo-top-in-box.png" alt=""></div>
+
+
+<main id="home">
+  <header class="hero">
+    <img class="logo" src="assets/logo-top-in-box.png" alt="Logo Top in Box CWB">
+    <h1>SEJA BEM-VINDO À TOP IN BOX CWB!</h1>
+    <p>Seu momento mais gostoso começa aqui! Conheça nossos produtos e descubra nossas opções.</p>
+    <nav class="mainbtns" aria-label="Menu principal">
+      <a href="#cardapio" class="btn" data-go="menu" data-icon="fork"><span>CARDÁPIO</span></a>
+      <a class="btn" data-link="instagram" data-icon="insta"><span>INSTAGRAM</span></a>
+      <a class="btn" data-link="whatsapp" data-icon="wa"><span>WHATSAPP</span></a>
+      <a class="btn" data-link="mapa" data-icon="pin"><span>LOCALIZAÇÃO</span></a>
+    </nav>
+  </header>
+  <section class="info-strip">
+    <div><h2>ACOMPANHE A TOP IN BOX CWB!</h2><p>Fique por dentro das novidades e conheça nossos produtos pelo Instagram.</p>
+      <a class="btn small" data-link="instagram" data-icon="insta"><span>INSTAGRAM</span></a></div>
+    <div><h2>ONDE ESTAMOS</h2><p data-txt="endereco"></p>
+      <a class="btn small" data-link="mapa" data-icon="pin"><span>COMO CHEGAR</span></a></div>
+  </section>
+</main>
+
+<main id="menu" hidden>
+  <header class="menuhead">
+    <button class="btn small" data-go="home">&larr; VOLTAR</button>
+    <img src="assets/logo-top-in-box.png" alt="Top in Box CWB">
+    <div><h1>NOSSO CARDÁPIO</h1><p>Conheça nossas opções</p></div>
+  </header>
+  <div id="tabs" role="tablist" aria-label="Categorias"></div>
+  <div id="list" role="tabpanel"></div>
+
+  <section class="party">
+    <h2>VAI TER FESTA? A GENTE PREPARA!</h2>
+    <p>Deixe sua comemoração ainda mais gostoso com nossos salgadinhos, assadinhos, churros e brigadeiros.</p>
+    <ul id="enc-list"></ul>
+    <div class="attn"><h3>ATENÇÃO!</h3><ul id="avisos"></ul>
+      <p><strong>Retirada na loja ou envio por aplicativo solicitado pelo cliente.</strong></p></div>
+    <a class="btn" data-link="whatsapp" data-icon="wa"><span>DÚVIDAS SOBRE ENCOMENDAS</span></a>
+  </section>
+</main>
+
+<footer>
+  <h2>TOP IN BOX CWB</h2>
+  <nav aria-label="Rodapé">
+    <a href="#" data-go="home">Início</a><a href="#cardapio" data-go="menu">Cardápio</a>
+    <a href="#cardapio" data-go="menu" data-cat="doces">Doces</a><a href="#cardapio" data-go="menu" data-cat="salgados">Salgados</a>
+    <a href="#cardapio" data-go="menu" data-cat="pacotes">Pacotes</a><a href="#cardapio" data-go="menu" data-cat="centos">Centos de doces</a>
+    <a href="#cardapio" data-go="menu" data-cat="bebidas">Bebidas</a>
+    <a data-link="instagram">Instagram</a><a data-link="whatsapp">WhatsApp</a><a data-link="mapa">Localização</a>
+  </nav>
+  <p>WhatsApp: <span data-txt="whatsappTexto"></span> · Instagram: <span data-txt="instagramUser"></span></p>
+  <p data-txt="endereco"></p>
+  <small>© 2026 Top in Box CWB. Todos os direitos reservados.</small>
+</footer>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

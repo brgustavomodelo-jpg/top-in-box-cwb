@@ -1,0 +1,89 @@
+/* Identidade visual — altere as cores aqui */
+:root{--laranja:#DF6F12;--marrom:#733A21;--branco:#fff;--amarelo:#FFC451;--escuro:#452315;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--laranja);color:var(--branco);font:500 1rem/1.5 "Trebuchet MS","Segoe UI",system-ui,sans-serif;overflow-x:hidden}
+body:not(.ready){overflow:hidden;height:100vh}
+h1,h2,h3,h4{font-family:"Arial Rounded MT Bold","Trebuchet MS",system-ui,sans-serif;line-height:1.15}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+[hidden]{display:none!important}
+/* Abertura */
+#intro{position:fixed;inset:0;z-index:50;background:var(--laranja);display:grid;place-items:center;transition:opacity .7s ease}
+#intro.out{opacity:0;pointer-events:none}
+#intro img{width:min(62vw,300px);animation:in 1.8s ease both}
+@keyframes in{0%{opacity:0;transform:scale(.8) translateY(18px)}55%{opacity:1;transform:scale(1) translateY(0)}78%{transform:translateY(-12px)}100%{transform:translateY(0)}}
+/* Botões */
+.btn{display:flex;align-items:center;justify-content:center;gap:.7rem;background:var(--marrom);color:var(--branco);text-decoration:none;font-weight:800;letter-spacing:.04em;padding:1.1rem 1.4rem;min-height:56px;border:0;border-radius:var(--r);box-shadow:0 4px 0 var(--escuro),0 8px 16px #0003;cursor:pointer;font-family:inherit;font-size:1.05rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--escuro)}
+.btn svg{width:26px;height:26px;fill:currentColor;flex:none}
+.btn.small{padding:.7rem 1.1rem;min-height:46px;font-size:.95rem;display:inline-flex}
+/* Início */
+.hero{max-width:640px;margin:0 auto;padding:2rem 1.2rem 1rem;text-align:center}
+.logo{width:min(70vw,300px);display:block;margin:0 auto 1rem}
+.hero h1{font-size:clamp(1.6rem,6vw,2.4rem);text-shadow:0 2px 0 var(--escuro)}
+.hero p{margin:.8rem auto 1.6rem;max-width:30rem}
+.mainbtns{display:grid;gap:.9rem}
+.ready .hero .logo,.ready .hero h1,.ready .hero p,.ready .mainbtns .btn{animation:up .6s ease both}
+.ready .hero h1{animation-delay:.1s}.ready .hero p{animation-delay:.2s}
+.ready .mainbtns .btn:nth-child(1){animation-delay:.35s}.ready .mainbtns .btn:nth-child(2){animation-delay:.5s}
+.ready .mainbtns .btn:nth-child(3){animation-delay:.65s}.ready .mainbtns .btn:nth-child(4){animation-delay:.8s}
+@keyframes up{from{opacity:0;transform:translateY(20px)}}
+.info-strip{display:grid;gap:1rem;max-width:900px;margin:1.5rem auto 2rem;padding:0 1.2rem}
+.info-strip>div{background:var(--branco);color:var(--escuro);border-radius:var(--r);padding:1.3rem;text-align:center;box-shadow:0 6px 18px #0002}
+.info-strip h2{font-size:1.15rem;margin-bottom:.4rem;color:var(--marrom)}
+.info-strip p{margin-bottom:.9rem}
+/* Cardápio */
+#menu{max-width:1000px;margin:0 auto;padding:1rem 1.2rem 2rem}
+.menuhead{display:grid;grid-template-columns:auto 64px 1fr;gap:.8rem;align-items:center;margin-bottom:1rem}
+.menuhead img{width:64px}
+.menuhead h1{font-size:1.5rem}
+#tabs{display:flex;gap:.6rem;overflow-x:auto;padding:.4rem 0 .8rem;position:sticky;top:0;background:var(--laranja);z-index:5;scrollbar-width:none}
+#tabs::-webkit-scrollbar{display:none}
+#tabs button{flex:none;background:var(--marrom);color:var(--branco);border:2px solid transparent;border-radius:var(--r);padding:.75rem 1.1rem;font:800 .9rem inherit;font-family:inherit;cursor:pointer;transition:.2s}
+#tabs button[aria-selected=true]{background:var(--branco);color:var(--marrom);border-color:var(--marrom);transform:translateY(-2px);box-shadow:0 4px 0 var(--escuro)}
+#list.swap{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+#list h3{margin:1.4rem 0 .7rem;font-size:1.3rem;border-bottom:3px solid var(--amarelo);display:inline-block;padding-bottom:.2rem}
+.grid{display:grid;gap:.8rem;grid-template-columns:1fr}
+.card{background:var(--marrom);border-radius:var(--r);padding:1rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;box-shadow:0 4px 12px #0003}
+.card img{width:72px;height:72px;object-fit:cover;border-radius:10px;flex:none}
+.info{flex:1;min-width:0}
+.card h4{font-size:1.05rem}
+.card p{font-size:.88rem;opacity:.92}
+.card .detail{color:var(--amarelo);font-weight:700}
+.price{background:var(--amarelo);color:var(--escuro);font-weight:800;border-radius:999px;padding:.35rem .8rem;white-space:nowrap}
+/* Festa */
+.party{margin-top:2.5rem;background:var(--branco);color:var(--escuro);border-radius:var(--r);padding:1.5rem;box-shadow:0 8px 24px #0003}
+.party h2{color:var(--marrom);font-size:clamp(1.3rem,4.5vw,1.8rem)}
+.party>p{margin:.5rem 0 1rem}
+#enc-list{list-style:none;padding:0;display:grid;gap:.5rem;margin-bottom:1.2rem}
+#enc-list li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.6rem .9rem;background:#fff3e6;border-radius:10px}
+#enc-list small{display:block;opacity:.8}
+#enc-list b{background:var(--marrom);color:var(--amarelo);padding:.3rem .7rem;border-radius:999px;white-space:nowrap}
+.attn{background:var(--marrom);color:var(--branco);border-radius:var(--r);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.attn h3{color:var(--amarelo);margin-bottom:.4rem}
+.attn ul{padding-left:1.1rem;margin-bottom:.7rem}
+/* Rodapé */
+footer{background:var(--marrom);color:var(--branco);text-align:center;padding:2rem 1.2rem 5rem}
+footer h2{margin-bottom:.8rem}
+footer nav{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;justify-content:center;margin-bottom:1rem}
+footer a{color:var(--branco);cursor:pointer}
+footer a:hover{color:var(--amarelo)}
+footer p{margin:.2rem 0}
+footer small{display:block;margin-top:1rem;opacity:.8}
+/* Telas maiores */
+@media(min-width:560px){.grid{grid-template-columns:1fr 1fr}.info-strip{grid-template-columns:1fr 1fr}}
+@media(min-width:768px){
+  .mainbtns{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  #enc-list{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}.card{padding:1.1rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+/* Painel branco atrás da logo: o "BOX" laranja da logo some sobre o fundo laranja */
+.logo,#intro img,.menuhead img{background:var(--branco);border-radius:28px;padding:14px 20px;box-shadow:0 8px 24px #0003}
+.logo{width:min(62vw,260px)}
+#intro img{width:min(56vw,270px)}
+.menuhead img{width:72px;padding:6px 8px;border-radius:14px}
+.menuhead{grid-template-columns:auto 72px 1fr}
